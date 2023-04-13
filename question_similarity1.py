@@ -10,7 +10,10 @@ from gensim.models import Word2Vec
 import gensim.downloader as api
 from sklearn.metrics.pairwise import cosine_similarity
 
-df = pd.read_csv("/Users/suresh/Downloads/test.csv")
+os.chdir("C:/Users/sdivy/Downloads")  
+df=pd.read_csv("upsc.csv", encoding= 'unicode_escape');
+
+
 df = df.rename(columns={"col1": "questions", "col2": "answers"})
 
 def clean_sentence(sentence, stopwords=False):
